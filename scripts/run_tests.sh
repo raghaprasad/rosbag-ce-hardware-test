@@ -1,0 +1,2 @@
+#!/bin/bash
+rostest rosbag_ce_hardware_tests_ros1 test_rosbag_uploader_ros1.launch

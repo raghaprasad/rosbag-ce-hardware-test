@@ -1,0 +1,3 @@
+<launch>
+    <node name="RunTests" pkg="rosbag_ce_hardware_tests_ros1" type="run_tests.sh" />
+</launch>
