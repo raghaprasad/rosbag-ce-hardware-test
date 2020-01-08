@@ -16,4 +16,7 @@
 
     <exec_depend>python-boto3</exec_depend>
     <exec_depend>s3_file_uploader</exec_depend>
+    <exec_depend>cloudwatch_metrics_collector</exec_depend>
+    <exec_depend>cloudwatch_logger</exec_depend>
+    <exec_depend>rosbag_uploader_ros1_integration_tests</exec_depend>
 </package>

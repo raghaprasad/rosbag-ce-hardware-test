@@ -11,6 +11,7 @@ catkin_package(
 #############
 install(PROGRAMS
         tests/test_rosbag_uploader_ros1.py
+        scripts/setup_dashboard.py
         DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 install(DIRECTORY configurations launch

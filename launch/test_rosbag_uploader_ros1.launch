@@ -1,0 +1,9 @@
+<launch>
+    <node name="setup_dashboard" pkg="rosbag_ce_hardware_tests_ros1" type="setup_dashboard.py" />
+    <include file="$(find s3_file_uploader)/launch/s3_file_uploader.launch">
+        <arg name="node_config_file" value="$(find rosbag_ce_hardware_tests_ros1)/configurations/config.yaml"/>
+    </include>
+    <include file="$(find health_metric_collector)/launch/sample_application.launch"/>
+    <param name="/s3_file_uploader/s3_bucket" command="$(find rosbag_uploader_ros1_integration_tests)/setup_test_bucket.sh"/>
+    <test test-name="TestS3FileUploader" pkg="rosbag_uploader_ros1_integration_tests" type="test_rosbag_uploader_ros1.py" />
+</launch>
